@@ -8,6 +8,6 @@
 
 **HOW TO**
 
-clone repository __git clone git@github.com:ahmadf27/react-test.git__
-install dependencies __yarn install__
-run __yarn dev__
+- clone repository __git clone git@github.com:ahmadf27/react-test.git__
+- install dependencies __yarn install__
+- run __yarn dev__
