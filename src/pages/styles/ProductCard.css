@@ -1,0 +1,76 @@
+.card-container {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: whitesmoke;
+  box-shadow: black;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.product-image {
+  height: 100px;
+  width: 100px;
+  background-color: lightgray;
+}
+
+.product-data {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  margin-left: 32px;
+  margin-right: 16px;
+}
+
+.row-data {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+h5 {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.product-action {
+  flex: 1;
+  display: flex;
+  height: 100px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.btn-edit {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  flex: 1;
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.btn-delete {
+  background-color: red; /* Green */
+  border: none;
+  color: white;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  flex: 1;
+  font-size: 16px;
+}

@@ -1,26 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import './index.css'
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
+import AddProduct from './pages/AddProduct'
+import EditProduct from './pages/EditProduct'
+import ProductList from './pages/ProductList'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { Provider } from 'react-redux'
+import { createStore, compose } from 'redux'
+import Reducer from './redux/reducer'
+
+const store = compose(
+  window.devToolsExtension ? window.devToolsExtension() : f => f
+)(createStore)(Reducer)
+
+class App extends React.Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <BrowserRouter>
+          <div>
+            <div className='topnav'>
+              <h1 className='logo'>Logo</h1>
+            </div>
+            <div className='content'>
+              <div className='sidenav'>
+                <Link to='/' className='link'>
+                  Product List
+                </Link>
+                <Link to='/add' className='link'>
+                  Add Product
+                </Link>
+              </div>
+              <div className='main'>
+                <Switch>
+                  <Route path='/' component={ProductList} exact />
+                  <Route path='/add' component={AddProduct} exact />
+                  <Route path='/edit/:id' component={EditProduct} exact />
+                </Switch>
+              </div>
+            </div>
+          </div>
+        </BrowserRouter>
+      </Provider>
+    )
+  }
 }
 
-export default App;
+export default App
