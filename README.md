@@ -4,9 +4,10 @@
 - Simple CRUD with Redux
 - Load more scrolling when list > 5
 - Unit test with jest & enzyme
+- SSR with express (maybe not work properly)
 
-**HOW TO INSTALL**
+**HOW TO**
 
-- git clone git@github.com:ahmadf27/react-test.git
-- yarn install
-- yarn start
+clone repository __git clone git@github.com:ahmadf27/react-test.git__
+install dependencies __yarn install__
+run __yarn dev__
